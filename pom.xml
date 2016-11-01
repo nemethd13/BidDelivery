@@ -16,9 +16,11 @@
         <hibernate.version>4.3.6.Final</hibernate.version>
         <mysql.version>5.1.31</mysql.version>
         <jackson.version>2.5.3</jackson.version>
+        <org.projectlombok.version>1.16.8</org.projectlombok.version>
     </properties>
 
     <dependencies>
+
 
         <dependency>
             <groupId>com.fasterxml.jackson.datatype</groupId>
@@ -163,6 +165,11 @@
             <artifactId>json-path-assert</artifactId>
             <version>0.8.1</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.14.8</version>
         </dependency>
 
     </dependencies>

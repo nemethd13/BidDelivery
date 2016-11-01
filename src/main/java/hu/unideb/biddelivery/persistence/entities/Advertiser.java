@@ -1,5 +1,9 @@
 package hu.unideb.biddelivery.persistence.entities;
 
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -8,6 +12,10 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.Size;
 
+
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
 @Entity
 @Table(name="advertiser")
 public class Advertiser {
@@ -36,8 +44,6 @@ public class Advertiser {
     @Column(name = "email", nullable = false)
     private String email;
 
-
-
     @Size(min=3, max=50)
     @Column(name = "country", nullable = false)
     private String country;
@@ -56,27 +62,6 @@ public class Advertiser {
 
     @Column(name = "housenumber", nullable = false)
     private int houseNumber;
-
-    public Advertiser() {
-        super();
-    }
-
-    public Advertiser(int id, String firstName, String lastName, String userName, String passWord, String email,
-                       String country, String county, String city, String street, int houseNumber) {
-        super();
-        this.id = id;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.userName = userName;
-        this.passWord = passWord;
-        this.email = email;
-
-        this.country = country;
-        this.county = county;
-        this.city = city;
-        this.street = street;
-        this.houseNumber = houseNumber;
-    }
 
     public int getId() {
         return id;
@@ -126,8 +111,6 @@ public class Advertiser {
         this.email = email;
     }
 
-
-
     public String getCountry() {
         return country;
     }
@@ -167,19 +150,5 @@ public class Advertiser {
     public void setHouseNumber(int houseNumber) {
         this.houseNumber = houseNumber;
     }
-
-
-
-
-    @Override
-    public String toString() {
-        return "Advertiser [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", userName=" + userName
-                + ", passWord=" + passWord + ", email=" + email +  ", country="
-                + country + ", county=" + county + ", city=" + city + ", street=" + street + ", houseNumber="
-                + houseNumber + "]";
-    }
-
-
-
 
 }
