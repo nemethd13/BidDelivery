@@ -12,7 +12,6 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.Size;
 
-
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString

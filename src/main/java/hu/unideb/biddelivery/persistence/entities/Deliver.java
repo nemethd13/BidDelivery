@@ -1,4 +1,5 @@
 package hu.unideb.biddelivery.persistence.entities;
+
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
@@ -15,49 +16,39 @@ import javax.validation.constraints.Size;
 @AllArgsConstructor
 @ToString
 @Entity
-@Table(name="deliver")
+@Table(name = "deliver")
 public class Deliver {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-
-    @Size(min=3, max=50)
+    @Size(min = 3, max = 50)
     @Column(name = "firstname", nullable = false)
     private String firstName;
-
-    @Size(min=3, max=50)
+    @Size(min = 3, max = 50)
     @Column(name = "lastname", nullable = false)
     private String lastName;
-
-    @Size(min=3, max=50)
+    @Size(min = 3, max = 50)
     @Column(name = "username", nullable = false)
     private String userName;
-
-    @Size(min=3, max=100)
+    @Size(min = 3, max = 100)
     @Column(name = "password", nullable = false)
     private String passWord;
-
-    @Size(min=3, max=50)
+    @Size(min = 3, max = 50)
     @Column(name = "email", nullable = false)
     private String email;
-
-    @Size(min=3, max=50)
+    @Size(min = 3, max = 50)
     @Column(name = "country", nullable = false)
     private String country;
-
-    @Size(min=3, max=50)
+    @Size(min = 3, max = 50)
     @Column(name = "county", nullable = false)
     private String county;
-
-    @Size(min=3, max=50)
+    @Size(min = 3, max = 50)
     @Column(name = "city", nullable = false)
     private String city;
-
-    @Size(min=3, max=50)
+    @Size(min = 3, max = 50)
     @Column(name = "street", nullable = false)
     private String street;
-
     @Column(name = "housenumber", nullable = false)
     private int houseNumber;
 
