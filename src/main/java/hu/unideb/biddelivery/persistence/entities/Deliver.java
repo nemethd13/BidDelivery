@@ -11,6 +11,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.Size;
+import java.util.List;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -51,6 +52,8 @@ public class Deliver {
     private String street;
     @Column(name = "housenumber", nullable = false)
     private int houseNumber;
+    
+    List<Vehicle> vehicles;
 
     public int getId() {
         return id;
@@ -140,4 +143,11 @@ public class Deliver {
         this.houseNumber = houseNumber;
     }
 
+    public List<Vehicle> getVehicles() {
+        return vehicles;
+    }
+
+    public void setVehicles(List<Vehicle> vehicles) {
+        this.vehicles = vehicles;
+    }
 }
