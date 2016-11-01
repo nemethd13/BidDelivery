@@ -9,8 +9,8 @@ import javax.persistence.Table;
 import javax.validation.constraints.Size;
 
 @Entity
-@Table(name="customer")
-public class Customer {
+@Table(name="advertiser")
+public class Advertiser {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -59,12 +59,12 @@ public class Customer {
     @Column(name = "housenumber", nullable = false)
     private int houseNumber;
 
-    public Customer() {
+    public Advertiser() {
         super();
     }
 
-    public Customer(int id, String firstName, String lastName, String userName, String passWord, String email,
-                    String phoneNumber, String country, String county, String city, String street, int houseNumber) {
+    public Advertiser(int id, String firstName, String lastName, String userName, String passWord, String email,
+                      String phoneNumber, String country, String county, String city, String street, int houseNumber) {
         super();
         this.id = id;
         this.firstName = firstName;
@@ -181,7 +181,7 @@ public class Customer {
 
     @Override
     public String toString() {
-        return "Customer [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", userName=" + userName
+        return "Advertiser [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", userName=" + userName
                 + ", passWord=" + passWord + ", email=" + email + ", phoneNumber=" + phoneNumber + ", country="
                 + country + ", county=" + county + ", city=" + city + ", street=" + street + ", houseNumber="
                 + houseNumber + "]";

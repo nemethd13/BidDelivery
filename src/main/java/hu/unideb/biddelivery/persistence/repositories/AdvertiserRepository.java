@@ -1,11 +1,10 @@
 package hu.unideb.biddelivery.persistence.repositories;
 
+import hu.unideb.biddelivery.persistence.entities.Advertiser;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import hu.unideb.biddelivery.persistence.entities.Customer;
-
 @Repository
-public interface CustomerRepository  extends JpaRepository<Customer, Long>  {
+public interface AdvertiserRepository extends JpaRepository<Advertiser, Long>  {
 
 }
