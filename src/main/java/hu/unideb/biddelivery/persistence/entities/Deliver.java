@@ -1,5 +1,4 @@
 package hu.unideb.biddelivery.persistence.entities;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,8 +8,8 @@ import javax.persistence.Table;
 import javax.validation.constraints.Size;
 
 @Entity
-@Table(name="advertiser")
-public class Advertiser {
+@Table(name="deliver")
+public class Deliver {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -57,11 +56,11 @@ public class Advertiser {
     @Column(name = "housenumber", nullable = false)
     private int houseNumber;
 
-    public Advertiser() {
+    public Deliver() {
         super();
     }
 
-    public Advertiser(int id, String firstName, String lastName, String userName, String passWord, String email,
+    public Deliver(int id, String firstName, String lastName, String userName, String passWord, String email,
                        String country, String county, String city, String street, int houseNumber) {
         super();
         this.id = id;
@@ -174,7 +173,7 @@ public class Advertiser {
     @Override
     public String toString() {
         return "Advertiser [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", userName=" + userName
-                + ", passWord=" + passWord + ", email=" + email +  ", country="
+                + ", passWord=" + passWord + ", email=" + email  + ", country="
                 + country + ", county=" + county + ", city=" + city + ", street=" + street + ", houseNumber="
                 + houseNumber + "]";
     }
