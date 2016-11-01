@@ -23,6 +23,10 @@ public class Advertisement {
     private String text;
 
     @Embedded
+    @AttributeOverrides({
+            @AttributeOverride(name="startDate", column=@Column(name="startdate")),
+            @AttributeOverride(name="endDate", column=@Column(name="enddate"))
+    })
     private Auction auction;
 
     public int getId() {

@@ -20,11 +20,11 @@ public class Auction {
         CLOSED
     }
 
-    @Column(name = "startDate", nullable = false)
+
     private Date startDate;
-    @Column(name = "enddate", nullable = false)
+
     private Date endDate;
-    @Column(name = "state", nullable = false)
+
     private AuctionState State;
 
     public Date getStartDate() {
